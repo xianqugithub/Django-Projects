@@ -1,0 +1,17 @@
+<h1> Welcome to Xian's Blog! </h1>
+
+<h2> Latest Post</h2>
+
+{% for post in posts.all %}
+
+    {{ post.id }}
+
+    <br />
+    {{ post.pub_date_pretty }}
+    <br />
+    <img src="{{ post.image.url }}"/>
+    {{ post.summary }}
+    <br />
+    <br />
+
+{% endfor %}
